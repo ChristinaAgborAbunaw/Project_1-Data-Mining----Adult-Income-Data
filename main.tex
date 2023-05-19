@@ -1,0 +1,135 @@
+\documentclass[12pt,a4paper,twoside,openright]{report}
+
+% Packages
+\usepackage{graphicx} % for including images
+\usepackage{amsmath} % for math equations
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{setspace} % for spacing
+\usepackage{fancyhdr} % for headers and footers
+\usepackage{cite} % for citations
+
+% Page formatting
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RO,LE]{\thepage}
+\fancyhead[LO]{\nouppercase{\rightmark}}
+\fancyhead[RE]{\nouppercase{\leftmark}}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\headheight}{14pt}
+
+% Title page
+\title{APPLICATION OF STATISTICAL LEARNING TECHNIQUES TO THE ADULT INCOME DATA SET}
+\author{Christina Agbor Abunaw}
+\date{August 2018}
+
+% Begin the document
+\begin{document}
+
+% Title page
+\maketitle
+
+% Abstract
+\begin{abstract}
+This is the abstract of your thesis.
+\end{abstract}
+
+% Table of Contents
+\tableofcontents
+
+% List of Figures
+\listoffigures
+
+% List of Tables
+\listoftables
+
+% Introduction
+\chapter{Introduction}
+The US Adult Income Data set (1994), also known as the "Census Income" data set or "Adult" data set, is a widely used data set for studying income prediction and classification problems. It contains information collected from the United States Census Bureau and represents a sample of working-age individuals from the US population.
+
+This report aims at using both supervised and unsupervised statistical learning methods to answer the research questions. Supervised statistical learning involves building  statistical models for predicting and estimating an outcome based on one or more independent variables\cite{tib}. Unsupervised statistical learning on the other hand has no supervised outcome just the presence of inputs that aims at studying relationships and or structures within the data. 
+
+\subsection{Objectives}
+\begin{enumerate}
+\item What are the key demographic factors (such as age, gender, education level, or marital status) that influence income levels?
+\item Are there any patterns or associations between education level, occupation, and marital status that emerge from the data?
+\end{enumerate}
+
+
+\subsection{Data Descriptions}
+The data set used in this study contains 32,561 records and 15 attributes containing both numerical and categorical features and was obtained from UCI Machine Learning Repository \cite{uci}. For the purpose of this study, predictions will be made using Education\_num a numeric variable describing the highest level of education achieved by a worker, and income a binary variable indicating whether or not a worker makes a salary of 50,000 dollars annually for the regression and classification problems respectively. Below is an overview of the features and attributes present in the data set: \\
+
+\textbf{Age:} Represents the age of the individual as a continuous variable.\\
+
+\textbf{Workclass:} Describes the type of work the individual is engaged in, such as Private, Self-emp-not-inc, Self-emp-inc, Federal-gov, Local-gov, State-gov, Without-pay, or Never-worked.\\
+
+\textbf{Education:} Indicates the highest level of education completed by the individual. It includes categories such as Bachelors, Masters, Doctorate, etc.\\
+
+\textbf{Education Number:} Represents the numerical encoding of the education level, ranging from 1 to 16.\\
+
+\textbf{Marital Status:} Indicates the marital status of the individual, including categories such as Married-civ-spouse, Divorced, Never-married, Separated, Widowed, etc.\\
+
+\textbf{Occupation:} Describes the occupation of the individual, such as Tech-support, Craft-repair, Sales, Exec-managerial, etc.\\
+
+\textbf{Relationship:} Represents the relationship of the individual in a family, such as Wife, Husband, Own-child, Not-in-family, Unmarried, etc.\\
+
+\textbf{Race: }Indicates the race of the individual, including categories like White, Black, Asian-Pac-Islander, Amer-Indian-Eskimo, Other.\\
+
+\textbf{Sex:} Represents the gender of the individual, either Male or Female.\\
+
+\textbf{Capital Gain:} Indicates the capital gains earned by the individual as a continuous variable.\\
+
+\textbf{Capital Loss:} Represents the capital losses incurred by the individual as a continuous variable.\\
+
+\textbf{Hours per week:} Describes the number of hours worked per week by the individual as a continuous variable.\\
+
+\textbf{Native Country:} Indicates the native country of the individual, such as the United States, Mexico, Germany, Canada, etc.\\
+
+\textbf{Income:} The target variable classifies individuals into two categories: $ > 50K$ (indicating an annual income above $ \$ $ 50,000 ) and $\leq 50K$ (indicating an annual income of $ \$ 50,000$ or less).
+
+% Statistical Methods
+\chapter{Statistical Methods}
+
+
+% Methodology
+\chapter{Exploratory Data Analysis}
+Exploratory data analysis was done to gain insight into the census adult data set. Firstly, this includes examining summary statistics, distributions, and correlations between variables, and identifying any patterns or trends. Visualisations, such as histograms, box plots, scatter plots, or correlation matrices, will be used to explore the relationships between variables and the target variable.
+
+we checked for the relationship between variables using a correlation plot. Correlation measures the relationship between two variables. Two variables are considered to be highly correlated if one variable can be used to explain the other in which case we have a problem called multicollinearity. Next, we checked the skewness of the variables. A variable is termed highly skewed if its absolute value is greater than 1 and moderately skewed if the absolute value is greater than 0.5.
+
+% Results
+\chapter{Results}
+This is the results section of your thesis.
+
+% Conclusion
+\chapter{Discussion}
+This is the conclusion section of your thesis.
+
+% Conclusion
+\chapter{Conclusion}
+This is the conclusion section of your thesis.
+
+% Bibliography
+\begin{thebibliography}{99}
+ \bibitem{uci}
+ Dua, D. and Karra Taniskidou, E. (2017). \textit{UCI Machine Learning Repository [http://archive.ics.uci.edu/ml].} Irvine, CA: University of California, School of Information and Computer Science.
+
+\bibitem{tib}
+Hastie, T., Tibshirani, R. and Friedman, J. (2009).
+\textit{The Elements of Statistical Learning.(2nd edition).}
+ Springer, New York, USA.
+ 
+ \bibitem{james}
+ James G., Witten D., Hastie T. and Tibshirani R., 2013. 
+ \textit{An Introduction to Statistical Learning with Applications in R.}  Springer, United States of America.
+\bibitem{lda}
+ Molenberghs, G. \& Verbeke, G. (2015) \textit{Introduction to Longitudinal Data Analysis}, [Lecture notes]  Hasselt University, Masters in Statistics, February, 2015.
+ 
+\end{thebibliography}
+
+\chapter{Appendix}
+\section{Appendix A (Supplementary Information)}
+\section{Appendix B (SAS and R Codes)}
+
+\end{document}
